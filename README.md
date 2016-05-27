@@ -88,7 +88,7 @@ Command and aliases | Description | Usage
 ### Help  
 Command and aliases | Description | Usage
 ----------------|--------------|-------
-`-h`, `-help`, `@BotName help`, `@BotName h`, `~h`  |  Either shows a help for a single command, or PMs you help link if no arguments are specified. |  '-h !m q' or just '-h' 
+
 `-hgit`  |  Generates the commandlist.md file. **Owner Only!**
 `-readme`, `-guide`  |  Sends a readme and a guide links to the channel.
 `-donate`, `~donate`  |  Instructions for helping the project!
