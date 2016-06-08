@@ -23,7 +23,7 @@ Command and aliases | Description | Usage
 `.cleanv+t`  |  Deletes all text channels ending in `-voice` for which voicechannels are not found. **Use at your own risk.**
 `.v+t`, `.voice+text`  |  Creates a text channel for each voice channel only users in that voice channel can see.If you are server owner, keep in mind you will see them all the time regardless.
 `.scsc`  |  Starts an instance of cross server channel. You will get a token as a DMthat other people will use to tune in to the same instance
-`.jcsc`  |  Joins current channel to an instance of cross server channel using the token.
+`.jcsc`  |  Joins current channel to an instance of crossh server channel using the token.
 `.lcsc`  |  Leaves Cross server channel instance from this channel
 `.asar`  |  Adds a role, or list of roles separated by whitespace(use quotations for multiword roles) to the list of self-assignable roles. |  .asar Gamer
 `.rsar`  |  Removes a specified role from the list of self-assignable roles.
@@ -85,15 +85,7 @@ Command and aliases | Description | Usage
 `.announce`  |  Sends a message to all servers' general channel bot is connected to.**Owner Only!** |  .announce Useless spam
 `.whoplays`  |  Shows a list of users who are playing the specified game.
 
-### Help  
-Command and aliases | Description | Usage
-----------------|--------------|-------
 
-`-hgit`  |  Generates the commandlist.md file. **Owner Only!**
-`-readme`, `-guide`  |  Sends a readme and a guide links to the channel.
-`-donate`, `~donate`  |  Instructions for helping the project!
-`-modules`, `.modules`  |  List all bot modules.
-`-commands`, `.commands`  |  List all of the bot's commands from a certain module.
 
 ### Permissions  
 Command and aliases | Description | Usage
