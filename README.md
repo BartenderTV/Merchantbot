@@ -188,33 +188,39 @@ Command and aliases | Description | Usage
 ### Music  
 Command and aliases | Description | Usage
 ----------------|--------------|-------
-`!m n`, `!m next`, `!m skip`  |  Goes to the next song in the queue. You have to be in the same voice channel as the bot. |  `!m n`
-`!m s`, `!m stop`  |  Stops the music and clears the playlist. Stays in the channel. |  `!m s`
-`!m d`, `!m destroy`  |  Completely stops the music and unbinds the bot from the channel. (may cause weird behaviour) |  `!m d`
-`!m p`, `!m pause`  |  Pauses or Unpauses the song. |  `!m p`
-`!m q`, `!m yq`  |  Queue a song using keywords or a link. Bot will join your voice channel.**You must be in a voice channel**. |  `!m q Dream Of Venice`
-`!m lq`, `!m ls`, `!m lp`  |  Lists up to 15 currently queued songs. |  `!m lq`
-`!m np`, `!m playing`  |  Shows the song currently playing. |  `!m np`
-`!m vol`  |  Sets the music volume 0-100% |  `!m vol 50`
-`!m dv`, `!m defvol`  |  Sets the default music volume when music playback is started (0-100). Does not persist through restarts. |  `!m dv 80`
-`!m min`, `!m mute`  |  Sets the music volume to 0% |  `!m min`
-`!m max`  |  Sets the music volume to 100% (real max is actually 150%). |  `!m max`
-`!m half`  |  Sets the music volume to 50%. |  `!m half`
-`!m sh`  |  Shuffles the current playlist. |  `!m sh`
-`!m pl`  |  Queues up to 50 songs from a youtube playlist specified by a link, or keywords. |  `!m pl playlist link or name`
-`!m lopl`  |  Queues all songs from a directory. **Owner Only!** |  `!m lopl C:/music/classical`
-`!m radio`, `!m ra`  |  Queues a radio stream from a link. It can be a direct mp3 radio stream, .m3u, .pls .asx or .xspf |  `!m ra radio link here`
-`!m lo`  |  Queues a local file by specifying a full path. **Owner Only!** |  `!m lo C:/music/mysong.mp3`
-`!m mv`  |  Moves the bot to your voice channel. (works only if music is already playing) |  `!m mv`
-`!m rm`  |  Remove a song by its # in the queue, or 'all' to remove whole queue. |  `!m rm 5`
-`!m cleanup`  |  Cleans up hanging voice connections. **Owner Only!** |  `!m cleanup`
-`!m rcs`, `!m repeatcurrentsong`  |  Toggles repeat of current song. |  `!m rcs`
-`!m rpl`, `!m repeatplaylist`  |  Toggles repeat of all songs in the queue (every song that finishes is added to the end of the queue). |  `!m rpl`
-`!m save`  |  Saves a playlist under a certain name. Name must be no longer than 20 characters and mustn't contain dashes. |  `!m save classical1`
-`!m load`  |  Loads a playlist under a certain name.  |  `!m load classical-1`
-`!m playlists`, `!m pls`  |  Lists all playlists. Paginated. 20 per page. Default page is 0. | `!m pls 1`
-`!m goto`  |  Goes to a specific time in seconds in a song.
-`!m getlink`, `!m gl`  |  Shows a link to the currently playing song.
+`!!next`, `!!n`, `!!skip`  |  Goes to the next song in the queue. You have to be in the same voice channel as the bot. |  `!m n`
+`!!stop`, `!!s`  |  Stops the music and clears the playlist. Stays in the channel. |  `!m s`
+`!!destroy`, `!!d`  |  Completely stops the music and unbinds the bot from the channel. (may cause weird behaviour) |  `!m d`
+`!!pause`, `!!p`  |  Pauses or Unpauses the song. |  `!m p`
+`!!queue`, `!!q`, `!!yq`  |  Queue a song using keywords or a link. Bot will join your voice channel.**You must be in a voice channel**. |  `!m q Dream Of Venice`
+`!!soundcloudqueue`, `!!sq`  |  Queue a soundcloud song using keywords. Bot will join your voice channel.**You must be in a voice channel**. |  `!m sq Dream Of Venice`
+`!!listqueue`, `!!lq`  |  Lists 15 currently queued songs per page. Default page is 1. |  `!m lq` or `!m lq 2`
+`!!nowplaying`, `!!np`  |  Shows the song currently playing. |  `!m np`
+`!!volume`, `!!vol`  |  Sets the music volume 0-100% |  `!m vol 50`
+`!!defvol`, `!!dv`  |  Sets the default music volume when music playback is started (0-100). Persists through restarts. |  `!m dv 80`
+`!!mute`, `!!min`  |  Sets the music volume to 0% |  `!m min`
+`!!max`  |  Sets the music volume to 100%. |  `!m max`
+`!!half`  |  Sets the music volume to 50%. |  `!m half`
+`!!shuffle`, `!!sh`  |  Shuffles the current playlist. |  `!m sh`
+`!!playlist`, `!!pl`  |  Queues up to 500 songs from a youtube playlist specified by a link, or keywords. |  `!m pl playlist link or name`
+`!!soundcloudpl`, `!!scpl`  |  Queue a soundcloud playlist using a link. |  `!m scpl https://soundcloud.com/saratology/sets/symphony`
+`!!localplaylst`, `!!lopl`  |  Queues all songs from a directory. **Bot Owner Only!** |  `!m lopl C:/music/classical`
+`!!radio`, `!!ra`  |  Queues a radio stream from a link. It can be a direct mp3 radio stream, .m3u, .pls .asx or .xspf (Usage Video: <https://streamable.com/al54>) |  `!m ra radio link here`
+`!!local`, `!!lo`  |  Queues a local file by specifying a full path. **Bot Owner Only!** |  `!m lo C:/music/mysong.mp3`
+`!!move`, `!!mv`  |  Moves the bot to your voice channel. (works only if music is already playing) |  `!m mv`
+`!!remove`, `!!rm`  |  Remove a song by its # in the queue, or 'all' to remove whole queue. |  `!m rm 5`
+`!!movesong`, `!!ms`  |  Moves a song from one position to another. |  `!! ms` 5>3
+`!!setmaxqueue`, `!!smq`  |  Sets a maximum queue size. Supply 0 or no argument to have no limit.  |  `!! smq` 50 or `!! smq`
+`!!cleanup`  |  Cleans up hanging voice connections. **Bot Owner Only!** |  `!m cleanup`
+`!!reptcursong`, `!!rcs`  |  Toggles repeat of current song. |  `!m rcs`
+`!!rpeatplaylst`, `!!rpl`  |  Toggles repeat of all songs in the queue (every song that finishes is added to the end of the queue). |  `!m rpl`
+`!!save`  |  Saves a playlist under a certain name. Name must be no longer than 20 characters and mustn't contain dashes. |  `!m save classical1`
+`!!load`  |  Loads a playlist under a certain name.  |  `!m load classical-1`
+`!!playlists`, `!!pls`  |  Lists all playlists. Paginated. 20 per page. Default page is 0. | `!m pls 1`
+`!!deleteplaylist`, `!!delpls`  |  Deletes a saved playlist. Only if you made it or if you are the bot owner. |  `!m delpls animu-5`
+`!!goto`  |  Goes to a specific time in seconds in a song.
+`!!getlink`, `!!gl`  |  Shows a link to the currently playing song.
+`!!autoplay`, `!!ap`  |  Toggles autoplay - When the song is finished, automatically queue a related youtube song. (Works only for youtube songs and when queue is empty)
 
 ### Searches  
 Command and aliases | Description | Usage
